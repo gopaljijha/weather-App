@@ -1,0 +1,120 @@
+{% extends 'Weatherbase.html' %}
+
+{% load static %}
+
+{% block title %}{{city_name}} {% endblock title %}
+
+{% block content %}
+
+<div class="forecast-table">
+    <div class="container">
+        <div class="forecast-container-live">
+            <div class="today forecast">
+                <div class="forecast-header">
+                    <div class="day">{{live_time}}</div>
+                </div> 
+                <div class="forecast-content-live">
+                    <div class="degree">
+                        <div class="large-text">{{city}},{{country}}</div> </br>
+                        <div class="large-text">{{live_temp}}<sup>o</sup>C</div>
+                        <div class="temperature">Temperature Min {{liveTemperature_min}}<sup>o</sup>C Max {{liveTemperature_max}}<sup>o</sup>C </div>
+                        <div class="weather-data">
+                            <div class="Humidity">Humidity {{liveHumidity}}%</div>
+                            <img style="height: 80px; width: 80px; margin-left: -20px; margin-right: auto;"  src="http://openweathermap.org/img/wn/{{liveIcon}}@2x.png" alt="weather">{{live_weather}}
+                            <img style="height: 80px; width: 80px" src="http://openweathermap.org/img/wn/{{liveCloudsIcon}}@2x.png" alt="">{{liveClouds}}%
+                        </div>
+                    </div>
+                </div>
+            </div>    
+		</div>
+	</div>
+</div>
+
+<div class="forecast-table">
+    <div class="container">
+        <div class="forecast-container-data">
+            <div class="forecast">
+                <div class="forecast-header">
+                    <div class="day">{{next_threeHour}}</div>
+                </div> 
+                <div class="forecast-content">
+                    <div class="forecast-icon">
+                        <img style="margin-left: -12px; margin-right: auto;" img src="http://openweathermap.org/img/wn/{{icon2}}@2x.png" alt="" width=48>
+                    </div>
+                    <div class="degree">{{temp_max1}}<sup>o</sup>C</div>
+                    <small>{{temp_min1}}<sup>o</sup></small>
+                    <div class="weather-data">{{wind1}}km/h</div>
+                </div>
+            </div>
+
+            <div class="forecast">
+                <div class="forecast-header">
+                 
+                    <div class="day">{{next_sixHour}}</div>
+                </div> 
+                <div class="forecast-content">
+                    <div class="forecast-icon">
+                        <img style="margin-left: -12px; margin-right: auto;" img src="http://openweathermap.org/img/wn/{{icon3}}@2x.png" alt="" width=48>
+                    </div>
+                    <div class="degree">{{temp_max2}}<sup>o</sup>C</div>
+                    <small>{{temp_min2}}<sup>o</sup></small>
+                    <div class="weather-data">{{wind2}}km/h</div>
+                </div>
+            </div>
+            <div class="forecast">
+                <div class="forecast-header">
+                <div class="day">{{next_nineHour}}</div>
+                </div>
+                <div class="forecast-content">
+                    <div class="forecast-icon">
+                        <img style="margin-left: -12px; margin-right: auto;" img src="http://openweathermap.org/img/wn/{{icon4}}@2x.png" alt="" width=48>
+                    </div>
+                    <div class="degree">{{temp_max3}}<sup>o</sup>C</div>
+                    <small>{{temp_min3}}<sup>o</sup></small>
+                    <div class="weather-data">{{wind3}}km/h</div>
+                </div>
+            </div>
+            <div class="forecast">
+                <div class="forecast-header">
+                <div class="day">{{next_twelveHour}}</div>
+                </div> 
+                <div class="forecast-content">
+                    <div class="forecast-icon">
+                        <img style="margin-left: -12px; margin-right: auto;" img src="http://openweathermap.org/img/wn/{{icon5}}@2x.png" alt="" width=48>
+                    </div>
+                    <div class="degree">{{temp_max4}}<sup>o</sup>C</div>
+                    <small>{{temp_min4}}<sup>o</sup></small>
+                    <div class="weather-data">{{wind4}}km/h</div>
+                </div>
+            </div>
+            <div class="forecast">
+                <div class="forecast-header">
+                <div class="day">{{next_fifteenHour}}</div>
+                </div>
+                <div class="forecast-content">
+                    <div class="forecast-icon">
+                        <img style="margin-left: -12px; margin-right: auto;" img src="http://openweathermap.org/img/wn/{{icon6}}@2x.png" alt="" width=48>
+                    </div>
+                    <div class="degree">{{temp_max5}}<sup>o</sup>C</div>
+                    <small>{{temp_min5}}<sup>o</sup></small>
+                    <div class="weather-data">{{wind5}}km/h</div>
+                </div>
+            </div>
+            <div class="forecast">
+                <div class="forecast-header">
+                <div class="day">{{next_eighteenHour}}</div>
+                </div>
+                <div class="forecast-content">
+                    <div class="forecast-icon">
+                        <img style="margin-left: -12px; margin-right: auto;" img src="http://openweathermap.org/img/wn/{{icon7}}@2x.png" alt="" width=48>
+                    </div>
+                    <div class="degree">{{temp_max6}}<sup>o</sup>C</div>
+                    <small>{{temp_min6}}<sup>o</sup></small>
+                    <div class="weather-data">{{wind6}}km/h</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
